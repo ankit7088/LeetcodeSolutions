@@ -10,7 +10,8 @@ public:
                 TreeNode* node=q.front();
                 q.pop();
                 if(node->left){
-                    trackParent.insert({node->left,node});
+                    trackParent[node->left]=node;
+//                     trackParent.insert({node->left,node});
                     q.push(node->left);
                 }
                 if(node->right){
